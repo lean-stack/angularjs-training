@@ -1,3 +1,6 @@
+# Dist builds
+dist/
+
 # NPM deps
 node_modules/
 
