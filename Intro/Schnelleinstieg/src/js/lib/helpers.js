@@ -3,18 +3,6 @@ function getAllTodos() {
   return JSON.parse(localStorage.getItem('todos') || '[]');
 }
 
-function getAllTodosOrMockdata() {
-  const todosMock = [
-    { id: -1, title: 'Setup an AngularJS Project', completed: true },
-    { id: -2, title: 'Learn Template Syntax', completed: false },
-    { id: -3, title: 'Dependency Injection', completed: false }
-  ];
-  if (localStorage.getItem('todos') === null) {
-    localStorage.setItem('todos', JSON.stringify(todosMock));
-  }
-  return getAllTodos();
-}
-
 function saveTodos(todos) {
   localStorage.setItem('todos', JSON.stringify(todos));
 }
@@ -48,4 +36,14 @@ function updateTodoTitle(id, title) {
 function deleteTodo(id) {
   const todos = getAllTodos().filter(t => t.id !== id);
   saveTodos(todos);
+}
+
+
+function mockSomeData() {
+  const todosMock = [
+    { id: -1, title: 'Setup an AngularJS Project', completed: true },
+    { id: -2, title: 'Learn Template Syntax', completed: false },
+    { id: -3, title: 'Dependency Injection', completed: false }
+  ];
+  localStorage.setItem('todos', JSON.stringify(todosMock));
 }
