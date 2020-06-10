@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AngularJS Setup</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body ng-app="myApp">
+  <h1>AngularJS Watching Scope</h1>
+  <section ng-controller="WatchingCtrl">
+    Dein Name: <input ng-model="firstname" ng-model-options="{ updateOn: 'blur' }">
+    <p ng-if="firstname">
+      Hallo {{ firstname }}
+    </p>
+    <p ng-if="msg1">
+      {{ msg1 }}
+    </p>
+  </section>
+  <h2>Ist dies schon eine AngularJS-Anwendung?</h2>
+  <p>
+    Antwort: <strong ng-bind="'Ja!'">Nein!</strong>
+  </p>
+  <!-- inject:js -->
+  <!-- endinject -->
+</body>
+
+</html>
