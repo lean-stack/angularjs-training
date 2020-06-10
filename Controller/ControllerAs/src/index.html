@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AngularJS Setup</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body ng-app="myApp">
+  <h1>AngularJS Controller-As Syntax</h1>
+  <section ng-controller="DemoCtrl as vm">
+    <h2>Controller sind Instanzen der Controller-Klasse</h2>
+    <p>
+      Schon mit AngularJS 1.2 eingeführt betont die Controller-As Syntax stärker
+      den OOP (Objektorientierte Programmierung) Charakter des Controllers.
+      Die Funktion, die bei der Controller-Registrierung übergeben wird, ist ein
+      JavaScript-Konstruktor und definiert damit eine Klasse.
+    </p>
+    <p>
+      Bei der Anwendung im Template bekommt die <code>ng-controller</code>-Direktive
+      zusätzlich einen frei gewählten Instanz-/Objekt-Namen übergeben.
+    </p>
+    <p>
+      Eingebürgert hat sich der Name <code>vm</code>, das eine Abkürzung für ViewModel
+      ist. Also die Daten bzw. das Modell für den View.
+    </p>
+    <p>
+      Beispiel: Der Trainer Ihrer Schulung heißt {{ vm.trainer }} und ihre
+      Schulung findet statt in {{ vm.location }}.
+    </p>
+    <p>
+      Technisch gesehen wird auf dem Scope über die ControllerAs-Syntax eine
+      Variable mit dem gewählten Namen definiert, die auf die Controller-Instanz
+      verweist.
+    </p>
+  </section>
+  <h2>Ist dies schon eine AngularJS-Anwendung?</h2>
+  <p>
+    Antwort: <strong ng-bind="'Ja!'">Nein!</strong>
+  </p>
+  <!-- inject:js -->
+  <!-- endinject -->
+</body>
+
+</html>
