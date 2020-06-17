@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Port Check</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body ng-app="portcheck" class="m-2">
+  <h1>Beispiel: Port Check Data</h1>
+  <hr>
+  <div ng-controller="DataCtrl" class="container">
+    <p ng-if="message">{{ message }}</p>
+    <p ng-if="error">Fehler beim Laden der Daten: {{ error }}</p>
+    <table class="table table-striped" ng-if="data">
+      <thead>
+        <tr>
+          <th>IP Adresse</th>
+          <th>Zeitpunkt</th>
+          <th>Port 5061</th>
+          <th>Port 443</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="rechner in data" >
+          <td>{{ rechner.IPAddressToString }}</td>
+          <td>{{ rechner.Date.value | date:'dd.MM.yyyy HH:mm:ss' }}</td>
+          <td ng-style="{ color: rechner.p5061 ? 'green' : 'red' }">
+            {{ rechner.p5061 ? 'OK' : 'Fehler' }}
+          </td>
+          <td ng-style="{ color: rechner.p443 ? 'green' : 'red' }">
+            {{ rechner.p443 ? 'OK' : 'Fehler' }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.js"></script>
+  <script src="js/app.module.js"></script>
+  <script src="js/data.controller.js"></script>
+</body>
+</html>

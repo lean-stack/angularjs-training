@@ -11,7 +11,7 @@
 <body ng-app="myApp">
   <h1>AngularJS</h1>
   <h2>Was ist AngularJS?</h2>
-  <p>
+  <p ng-controller="NamedCtrl">
     <strong>AngularJS</strong> ist ein JavaScript-Framework welches von
     Google entwickelt wurde. Es zielt auf die Entwicklung von
     Webanwendungen und legt großen Wert auf Struktur und Qualität. Es
@@ -20,7 +20,12 @@
     große Enterprise Anwendungen geeignet war. Durch Methoden wie
     Dependency Injection und ein ausgereiftes Tooling ermöglicht es
     effiziente und wartbare Softwareentwicklung auf Basis von JavaScript.
+    <br>
+    {{ beispiel | filterName }}
   </p>
+  <div sample-dir></div>
+  <sample-dir></sample-dir>
+  <component-name></component-name>
   <h2>Ist dies schon eine AngularJS-Anwendung?</h2>
   <p>
     Antwort: <strong ng-bind="'Ja!'">Nein!</strong>

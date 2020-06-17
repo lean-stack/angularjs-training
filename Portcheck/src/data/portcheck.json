@@ -1,0 +1,68 @@
+[
+  {
+    "IPAddressToString": "213.95.141.80",
+    "Date": {
+      "value": "2020-06-10T14:29:02.1302257+02:00",
+      "DisplayHint": 2,
+      "DateTime": "Mittwoch, 10. Juni 2020 14:29:02"
+    },
+    "Hostname": "sip",
+    "p5061": true,
+    "p443": true
+  },
+  {
+    "IPAddressToString": "213.95.141.70",
+    "Date": {
+      "value": "2020-06-10T14:29:02.2441778+02:00",
+      "DisplayHint": 2,
+      "DateTime": "Mittwoch, 10. Juni 2020 14:29:02"
+    },
+    "Hostname": "sip",
+    "p5061": false,
+    "p443": true
+  },
+  {
+    "IPAddressToString": "213.95.141.73",
+    "Date": {
+      "value": "2020-06-10T14:29:02.2912782+02:00",
+      "DisplayHint": 2,
+      "DateTime": "Mittwoch, 10. Juni 2020 14:29:02"
+    },
+    "Hostname": "sip",
+    "p5061": true,
+    "p443": true
+  },
+  {
+    "IPAddressToString": "213.95.141.16",
+    "Date": {
+      "value": "2020-06-10T14:29:02.3416764+02:00",
+      "DisplayHint": 2,
+      "DateTime": "Mittwoch, 10. Juni 2020 14:29:02"
+    },
+    "Hostname": "sip2",
+    "p5061": true,
+    "p443": true
+  },
+  {
+    "IPAddressToString": "213.95.141.9",
+    "Date": {
+      "value": "2020-06-10T14:29:02.3905034+02:00",
+      "DisplayHint": 2,
+      "DateTime": "Mittwoch, 10. Juni 2020 14:29:02"
+    },
+    "Hostname": "sip2",
+    "p5061": true,
+    "p443": true
+  },
+  {
+    "IPAddressToString": "213.95.141.6",
+    "Date": {
+      "value": "2020-06-10T14:29:02.4389129+02:00",
+      "DisplayHint": 2,
+      "DateTime": "Mittwoch, 10. Juni 2020 14:29:02"
+    },
+    "Hostname": "sip2",
+    "p5061": true,
+    "p443": true
+  }
+]

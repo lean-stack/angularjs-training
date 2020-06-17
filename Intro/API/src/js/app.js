@@ -1,20 +1,25 @@
 (function () {
 
-  // Module Registrattion
+  // Module Registration
   angular.module('myApp', []);
 
   // Module Getter for a previously registered module
   const myApp = angular.module('myApp');
 
+  // -------------------------------------------------------------------------
+
+
   // Manual Bootstrap
   angular.bootstrap(document, ['myApp']);
+
+
 
   // jqLite-Query or jQuery-Function if provided, mostly useful while debugging on console
   var $elt = angular.element(document.body);
 
   // Re-enable debug infos (use at browser console)
   // See: https://docs.angularjs.org/api/ng/function/angular.reloadWithDebugInfo
-  // angular.reloadWithDebugInfo(); 
+  // angular.reloadWithDebugInfo();
 
   // Manually injecting and retreiving services
   // See: https://docs.angularjs.org/api/ng/function/angular.injector
@@ -29,7 +34,7 @@
   angular.noop();
 
   // IE 8 Helper Methods
-  
+
   // Replaced by fn.bind(): https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
   var addOne = angular.bind({ acc: 17 }, function(inc) { this.acc += inc; return this.acc; }, 1);
   console.log(addOne());

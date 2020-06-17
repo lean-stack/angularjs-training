@@ -6,5 +6,8 @@ angular.module('myApp', [])
     .controller('InnerCtrl', function($scope) {
         $scope.title = 'CS ' + $scope.title;
     })
-    .controller('ItemCtrl', function($scope) {})
+    .controller('ItemCtrl', function($scope) {
+      // $scope.l wurde definitiert über ng-repeat im index.html
+      console.log('ItemCtrl für Sprache l:', $scope.l)
+    })
 ;

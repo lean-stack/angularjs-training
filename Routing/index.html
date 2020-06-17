@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AngularJS Setup</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <base href="/">
+</head>
+
+<body ng-app="myApp">
+  <h1>AngularJS</h1>
+  <nav>
+    <a href="/#!/">Home</a>
+    <a href="/#!/portcheck">Portcheck</a>
+    <a href="/#!/demo">Demo</a>
+    <a href="/#!/about">About</a>
+  </nav>
+  <ng-view></ng-view>
+  <h2>Ist dies schon eine AngularJS-Anwendung?</h2>
+  <p>
+    Antwort: <strong ng-bind="'Ja!'">Nein!</strong>
+  </p>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular-route.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/views/home.controller.js"></script>
+  <script src="js/views/about.controller.js"></script>
+  <script src="js/views/portcheck.controller.js"></script>
+</body>
+
+</html>

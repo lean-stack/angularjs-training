@@ -19,11 +19,11 @@
         function (v) { return v < max; }
       ).length;
     };
-    $scope.fullname = function() { return $scope.firstname + $scope.lastname; };
+    $scope.fullname = function() { return $scope.objectValue.firstname + " " + $scope.objectValue.lastname; };
 
     // Event Handlers
     $scope.incPrimitiveValue = function() {
-      $scope.primitiveValue += 1;
+      $scope.primitiveValue = $scope.primitiveValue + 1;
     }
 
   }

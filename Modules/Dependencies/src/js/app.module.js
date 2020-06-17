@@ -1,4 +1,4 @@
-angular.module('myApp', ['myFeature'])
+angular.module('myApp', ['ng', 'myFeature', 'myCommon', 'bereichA', 'bereichB'])
     .config(function () {
         console.log('Configuring app module ...');
     })

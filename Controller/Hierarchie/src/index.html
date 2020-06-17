@@ -17,13 +17,18 @@
       Code führen. Ausweg sind Components. Wichtig ist: Scopes werden "vererbt" - siehe
       dazu auch das Scope-Hierarchie Beispiel
     </p>
-    <p>
+    <p ng-controler="SubCtrl">
       Wichtige Themen einer AngularJS-Schulung: (Click to vote!)
     </p>
     <ul>
-      <li ng-repeat="topic in vm.topics" ng-controller="ChildCtrl as vm">
-        <span ng-click="vm.voteFor()">{{ vm.topic }}</span>
-        (Votes: {{ vm.votes }})
+      <li ng-repeat="topic in vm.topics">
+        <span>{{ topic }}</span>
+      </li>
+    </ul>
+    <ul>
+      <li ng-repeat="topic in vm.topics" ng-controller="ChildCtrl">
+        <span ng-click="voteFor()">{{ topic }}</span>
+        (Votes: {{ votes }})
       </li>
     </ul>
   </section>

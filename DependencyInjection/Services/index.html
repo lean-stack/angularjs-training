@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AngularJS Setup</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body ng-app="myApp">
+  <h1>AngularJS</h1>
+  <p ng-controller="AppCtrl" class="primary">
+    Ein Scope kontrolliert durch einen AppController.
+    <br>
+    Zähler: {{ count }}
+    <button ng-click="inc()">Inc</button>
+    <br>
+    Anzahl Rechner beim Portcheck: {{ anzahlRechner }}
+  </p>
+  <div ng-controller="AppCtrl" id="rechner">
+    Ein Scope kontrolliert durch einen AppController.
+    <br>
+    Zähler: {{ count }}
+    <button ng-click="inc()">Inc</button>
+  </div>
+  <h2>Ist dies schon eine AngularJS-Anwendung?</h2>
+  <p>
+    Antwort: <strong ng-bind="'Ja!'">Nein!</strong>
+  </p>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/counter.service.js"></script>
+  <script src="js/app.controller.js"></script>
+</body>
+
+</html>

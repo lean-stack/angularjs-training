@@ -10,15 +10,16 @@
 
 <body ng-app="myApp">
   <h1>AngularJS Controller</h1>
+
   <section ng-controller="DemoCtrl">
-    <h2>Aufgaben</h2>
+    <h2 ng-mouseover="incPrimitiveValue()">Aufgaben</h2>
     <p>
       Controller in AngularJS stellen Daten und Funktionalität für das HTML-Template bereit.
       Im Idealfall ist der Controller-Code sehr kurz und hat auch keine Kenntnisse vom
       DOM-Modell des Templates. Dies steigert die Testbarkeit der Controller.
     </p>
     <p>
-      Controller werden im Template angewandt über eine <code>ng-App</code>-Direktive, die
+      Controller werden im Template angewandt über eine <code>ng-controller</code>-Direktive, die
       den registrierten Controller-Namen übergeben bekommt. AngularJS erzeugt dann einen
       Scope (Sichtbarkeitsbereich, Kontext), der dem Controller-Konstruktor auf Wunsch im
       <code>$scope</code>-Argument übergeben wird.
@@ -28,7 +29,7 @@
       <button ng-click="incPrimitiveValue()">Inc</button>
     </p>
     <p>
-      Anzahl Primzahlen bis 20: {{ countOfPrimes(20) }}
+      Anzahl Primzahlen bis 20: {{ countOfPrimes(10) }}
     </p>
     <p>
       Meine bekannten Primzahlen
@@ -37,7 +38,7 @@
       </ul>
     </p>
     <p>
-      Ein Schauspieler: {{ objectValue.firstname }}
+      Ein Schauspieler: {{ fullname() }}
     </p>
   </section>
   <h2>Ist dies schon eine AngularJS-Anwendung?</h2>
